@@ -1,0 +1,9 @@
+bin/
+obj/
+Design/
+Temp/
+*.MDF
+*.LDF
+.vs
+Logs/
+Web.config

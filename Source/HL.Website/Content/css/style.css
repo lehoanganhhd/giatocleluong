@@ -1,0 +1,144 @@
+﻿html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: 'Open Sans', Arial, Tahoma, 'Times New Roman';
+}
+
+a:focus, a:visited, a:active {
+    outline: none;
+}
+
+.container {
+    width: 970px !important;
+}
+
+.clear-10 {
+    clear: both;
+    height: 10px;
+}
+
+.clear-20 {
+    clear: both;
+    height: 20px;
+}
+
+.clear-30 {
+    clear: both;
+    height: 30px;
+}
+
+.clear-50 {
+    clear: both;
+    height: 50px;
+}
+
+.banner {
+    background: url("../images/bgr-banner.png") repeat-x scroll center center;
+    height: 150px;
+    display: table;
+    width: 100%;
+}
+
+.banner-dragon {
+    background: url("../images/bgr-banner-1.png") no-repeat scroll center center;
+    height: 150px;
+    display: table;
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.bgr-nav {
+    background-color: #ff2702;
+    box-shadow: 5px 2px 5px #a7a7a7;
+    display: table;
+    width: 100%;
+}
+
+a.nav-link {
+    color: #fff;
+    font-weight: bold;
+}
+
+    a.active, a.nav-link:hover {
+        color: yellow;
+    }
+
+ul.nav {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+    ul.nav li.nav-item {
+        display: inline-block;
+    }
+
+    ul.nav li a:hover, ul.nav li a:active, ul.nav li a:visited, ul.nav li a:focus {
+        background-color: transparent;
+    }
+
+.bgr-slider {
+    background: url("../images/bgr-slider.png") no-repeat scroll center center;
+    margin-top: -18px;
+    height: 288px;
+}
+
+.main-box {
+    border-style: solid;
+    border-width: 3px;
+    border-image: linear-gradient(to top, #a0682e 0%, #d7a066 50%);
+    border-image-slice: 1;
+    background-image: linear-gradient(#fff4eb 0%, #ffdfc1 100%);
+}
+
+.title-box {
+    background-image: url('/Content/images/bgr-title-box.png');
+    background-position: center center;
+    background-size: cover;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    padding: 3px;
+    font-size: 14px;
+}
+
+a.news-title {
+    color: blue;
+    font-weight: bold;
+}
+
+.news-created {
+    color: red;
+    font-weight: bold;
+}
+
+a.link-xemchitiet {
+    text-align: right;
+    display: block;
+    color: blue;
+    font-style: italic;
+}
+
+.news-line {
+    border-top: 1px solid #ffb268;
+    height: 1px;
+    margin: 15px 0;
+}
+
+.footer {
+    background: #fff8a9 url("../images/icon-border.png") repeat-x scroll top center;
+    padding: 30px 0 15px 0;
+    display: table;
+    width: 100%;
+}
+
+.contain-img img {
+    max-width: 100%;
+}
