@@ -22,15 +22,16 @@ function getDataPhaHe() {
                     var arr = JSON.parse(content);
 
                     //Buid tree
-                    var parent = { 'ID': 0, 'Name': 'SƠ ĐỒ PHẢ HỆ DÒNG TỘC LÊ LƯƠNG', 'ParentID': null };
+                    var parent = { 'ID': 0, 'Name': 'SƠ ĐỒ PHẢ HỆ DÒNG TỘC LÊ LƯƠNG', 'ParentID': null, 'className': 'middle-level' };
                     arr = arr.map(function (x) {
                         x.name = x.Name;
+                        x.className = 'middle-level';
                         return x;
                     });
                     var tree = unflatten(arr);
                     tree = [
                         {
-                            'ID': 0, 'name': 'SƠ ĐỒ PHẢ HỆ DÒNG TỘC LÊ LƯƠNG', 'ParentID': null,
+                            'ID': 0, 'name': 'SƠ ĐỒ PHẢ HỆ DÒNG TỘC LÊ LƯƠNG', 'ParentID': null, 'className': 'middle-level',
                             'children': tree
                         }
                     ];
@@ -39,7 +40,9 @@ function getDataPhaHe() {
                         'data': tree[0],
                         //'nodeContent': 'Name',
                         'pan': true,
-                        'zoom': true
+                        'zoom': true,
+                        'exportButton': true,
+                        'exportFilename': 'Pha-he-gia-toc-Le-Luong'
                     });
 
                     oc.$chartContainer.on('touchmove', function (event) {
