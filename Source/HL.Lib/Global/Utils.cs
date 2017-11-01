@@ -168,25 +168,25 @@ namespace HL.Lib.Global
                         long ticks = online.TimeValue;
                         DateTime d = new DateTime(ticks);
                         DateTime dCurr = DateTime.Now;
+                        if (d.Day == dCurr.Day)
+                        {
+                            WebSettingService.Instance.Update("[Code]='VISITTODAY'", "@Value", GetCountVisitToday() + 1);
+                        }
+                        else
+                        {
+                            WebSettingService.Instance.Update("[Code]='VISITTODAY'", "@Value", 1);
+                        }
+                        if (d.Month == dCurr.Month)
+                        {
+                            WebSettingService.Instance.Update("[Code]='VISITMONTH'", "@Value", GetCountVisitMonth() + 1);
+                        }
+                        else
+                        {
+                            WebSettingService.Instance.Update("[Code]='VISITMONTH'", "@Value", 1);
+                        }
                         if (d.Year == dCurr.Year)
                         {
                             WebSettingService.Instance.Update("[Code]='VISITYEAR'", "@Value", GetCountVisitYear() + 1);
-                            if (d.Month == dCurr.Month)
-                            {
-                                WebSettingService.Instance.Update("[Code]='VISITMONTH'", "@Value", GetCountVisitMonth() + 1);
-                                if (d.Day == dCurr.Day)
-                                {
-                                    WebSettingService.Instance.Update("[Code]='VISITTODAY'", "@Value", GetCountVisitToday() + 1);
-                                }
-                                else
-                                {
-                                    WebSettingService.Instance.Update("[Code]='VISITTODAY'", "@Value", 1);
-                                }
-                            }
-                            else
-                            {
-                                WebSettingService.Instance.Update("[Code]='VISITMONTH'", "@Value", 1);
-                            }
                         }
                         else
                         {
